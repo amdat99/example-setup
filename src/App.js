@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import shallow from "zustand/shallow";
-import Notification from "./Notification";
+import Notification from "./components/Notification";
 import { useUserStore } from "./store";
-const FormTest = React.lazy(() => import("./FormTest"));
-const TestPage = React.lazy(() => import("./TestPage"));
+const FormTest = React.lazy(() => import("./pages/FormTest"));
+const TestPage = React.lazy(() => import("./pages/TestPage"));
 
 function App() {
   const [notifications, setNotifications, deleteNotification] = useUserStore(
